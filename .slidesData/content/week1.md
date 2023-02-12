@@ -45,8 +45,6 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 
 👩‍🏫 Lab Attendance - Not marked  
 
-💡 This room... had RGB lighting... but ... :(
-
 ---
 
 # Course Stuff
@@ -57,7 +55,6 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 
 > Slack - seceduau.slack.com  
 > `#cs6443`  
-> `#cs6443-21t2-h13a`
 
 ---
 
@@ -67,10 +64,10 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 
 ## Assessments
 
-* CTF Challenges
-* 2x Reports
-* Mid-term Exam
-* Final Examination
+* 10% - CTF Challenges
+* 40% - 2x Reports
+* ~Mid-term Exam~
+* 50% - Final Examination
 
 Check the course outline for the schedule
 
@@ -107,7 +104,7 @@ Check the course outline for the schedule
 ---
 
 * Vulnerability Report
-  * Groups of 4 / 5
+  * Groups of 3
   * More about this in the future...
   * For now, keep track of how you found flags
 
