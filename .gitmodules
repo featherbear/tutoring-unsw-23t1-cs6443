@@ -1,0 +1,6 @@
+[submodule ".slidesData/themes/reveal-hugo"]
+	path = .slidesData/themes/reveal-hugo
+	url = git@github.com:dzello/reveal-hugo.git
+[submodule "webcms4/repo"]
+	path = webcms4/repo
+	url = https://github.com/Yunsar/webcms4

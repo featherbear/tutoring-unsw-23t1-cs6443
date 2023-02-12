@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A logged in page</title>
+
+    <style>
+        :root {
+            font-size: 18px;
+        }
+
+        .error h3 {
+            color: red;
+        }
+        .error:not(.isActive) {
+            display: none;            
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 90vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>You are logged in as <u>${USERNAME}</u></h1>
+        <button class="logout">Logout</button>
+    </div>
+
+    <script>
+        document.querySelector('button.logout').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.cookie = "auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            location.reload()
+        })
+    </script>
+</body>
+
+</html>
