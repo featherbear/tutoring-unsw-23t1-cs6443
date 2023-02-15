@@ -21,8 +21,9 @@ date: 2021-06-02T23:57:19+10:00
 
 `andrew.j.wong@unsw.edu.au`
 
-* Teams ^
-* SECedu Slack - `featherbear`
+* SecSoc Discord - "$user.displayName"
+* SECedu Slack - "fire emoji 🔥"
+* Everywhere else - featherbear
 
 {{% /section %}}
 
@@ -41,7 +42,7 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 
 🍉 Food - Sure thing
 
-🎥 Recordings - Yes, next slide
+🎥 Recordings - No :(
 
 👩‍🏫 Lab Attendance - Not marked  
 
@@ -56,6 +57,8 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 > Slack - seceduau.slack.com  
 > `#cs6443`  
 
+> Discord, Messenger, Email, blah.
+
 ---
 
 {{< slide content="secedu.goodfaith" >}}
@@ -66,7 +69,7 @@ Share something interesting on your phone's photo gallery (or meme collection) t
 
 * 10% - CTF Challenges
 * 40% - 2x Reports
-* ~Mid-term Exam~
+* <s>Mid-term Exam</s>
 * 50% - Final Examination
 
 Check the course outline for the schedule
@@ -75,40 +78,27 @@ Check the course outline for the schedule
 
 ## Resources
 
+> [OpenLearning](https://www.openlearning.com/unswcourses/courses/webapp-security)
+
 > [featherbear.cc/tutoring-unsw](https://featherbear.cc/tutoring-unsw)
 
 ---
 
 ## Today's Agenda
 
+* Soo, the lecture..
 * Andrew's Rant
-* Activities 
-  * Logging into Quocca Bank
+* Setting up your environment
+  * Get your mTLS certificate
   * Installing Burp Suite
+  * Browser proxy, cookie editor, HTTP tools
   * Maybe try find some flags?
-    * Recon
-    * HTTP As A Service challenge
 
 ---
 
 # Andrew's Rant
 
 {{% section %}}
-
-* CTF
-  * Find flags, get points
-  * Finding 6843 flags, no points ... for now
-  * Finding 6843 flags, feel good about yourself
-  * Finding 6843 flags, get more out of the course without the stress of being assessed
-
----
-
-* Vulnerability Report
-  * Groups of 3
-  * More about this in the future...
-  * For now, keep track of how you found flags
-
----
 
 ## Doing this course at uni
 
@@ -134,14 +124,3 @@ See it in action
 * Resource page: [tutoring-unsw/resources](https://featherbear.cc/tutoring-unsw/resources)
 
 {{% /section %}}
-
----
-
-# Activities
-
-* First form report groups!
-* Logging into Quocca Bank
-* Installing Burp Suite
-* Maybe try find some flags?
-* Recon
-* HTTP As A Service challenge
