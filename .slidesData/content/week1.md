@@ -78,7 +78,7 @@ Check the course outline for the schedule
 
 ## Resources
 
-> [OpenLearning](https://www.openlearning.com/unswcourses/courses/webapp-security)
+> [Open Learning](https://www.openlearning.com/unswcourses/courses/webapp-security)
 
 > [featherbear.cc/tutoring-unsw](https://featherbear.cc/tutoring-unsw)
 
@@ -93,14 +93,15 @@ Check the course outline for the schedule
   * Installing Burp Suite
   * Browser proxy, cookie editor, HTTP tools
   * Maybe try find some flags?
+* Learn how to do DNS recon?
 
 ---
 
-# Andrew's Rant
+## Andrew's Rant
 
 {{% section %}}
 
-## Doing this course at uni
+### Doing this course at uni
 
 Like, at uni, physically, in person - i.e. here.
 
@@ -111,7 +112,7 @@ If you are using automated tools that have a large network footprint, please cha
 
 ---
 
-## Burp Suite
+### Burp Suite
 
 See it in action
 
@@ -124,3 +125,18 @@ See it in action
 * Resource page: [tutoring-unsw/resources](https://featherbear.cc/tutoring-unsw/resources)
 
 {{% /section %}}
+
+---
+
+## Activities
+
+* Setting up your environment
+  * Get your mTLS certificate
+  * Installing Burp Suite
+  * Browser proxy, cookie editor, HTTP tools
+  * Maybe try find some flags?
+* Learn how to do DNS recon!!
+
+Also, start documenting!
+
+---
