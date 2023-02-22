@@ -23,7 +23,7 @@ date: 2023-02-23T23:57:21+10:00
 * Website Recon
   * e.g. Wappalyzer
   * 🤖 Beep boop I'm a robot
-  * Beep boop I'm a [sitemap](jbhifi.com.au/sitemap.xml)
+  * Beep boop I'm a [sitemap](https://jbhifi.com.au/sitemap.xml)
   * Use the sauce 
 
 ---
