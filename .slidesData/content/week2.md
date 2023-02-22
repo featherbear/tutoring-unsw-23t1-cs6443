@@ -42,6 +42,16 @@ DNS and IPs
 
 ---
 
+# Website Basics
+
+* URLs
+* Methods
+* Versions
+* HTTPS
+* Cookies
+
+---
+
 # Auth[...]
 
 `authentication != authorisation`
@@ -51,9 +61,16 @@ DNS and IPs
 
 ---
 
-# 🍪 Cookies
 
 ---
+
+<!--
+
+Hashes
+
+https://github.com/featherbear/UNSW-CompClub2019Summer-SecurityWorkshop/tree/master/http_mitm
+
+-->
 
 <!-- 
 
