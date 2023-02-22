@@ -2,7 +2,7 @@
 title: "Week 2 - Auth and IAM"
 layout: "bundle"
 outputs: ["Reveal"]
-date: 2023-02-23T23:57:21+10:00
+date: 2023-02-23T02:57:21+10:00
 ---
 
 {{< slide class="center" >}}
