@@ -45,8 +45,11 @@ DNS and IPs
 # Website Basics
 
 * URLs
-* Methods
-* Versions
+* HTTP
+  * Methods
+  * Versions
+  * Headers
+  * State(lessness)
 * HTTPS
 * Cookies
 
@@ -60,6 +63,41 @@ DNS and IPs
 * Authorisation - What can I do?
 
 ---
+
+# Identity & Session Management
+
+{% section %}
+
+> How do we store sessions?
+
+Often as cookies
+
+* Session IDs
+* Plain-text
+* JWT
+* Flask session
+
+---
+
+> How do we steal cookies?
+
+Idk I only have sewing kits...
+
+* MITM
+* Physical access
+* XSS
+* Anything else?
+
+---
+
+> How do I keep my cookies safe?
+
+* Domain restriction
+* Expiry
+* HTTP Only flag
+* Secure flag
+
+{% /section %}
 
 
 ---
