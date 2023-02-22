@@ -13,7 +13,7 @@ date: 2023-02-23T23:57:21+10:00
 
 # Recon
 
-{% section %}
+{{% section %}}
 
 * Active / Passive Recon
 * Domain / DNS [Enumeration](https://featherbear.cc/UNSW-COMP6443/post/enumeration/)
@@ -36,7 +36,7 @@ date: 2023-02-23T23:57:21+10:00
 
 * Social Engineering
 
-{% /section %}
+{{% /section %}}
 
 ---
 
@@ -64,7 +64,7 @@ date: 2023-02-23T23:57:21+10:00
 
 # Identity & Session Management
 
-{% section %}
+{{% section %}}
 
 > How do we store sessions?
 
@@ -95,7 +95,7 @@ Idk I only have sewing kits...
 * HTTP Only flag
 * Secure flag
 
-{% /section %}
+{{% /section %}}
 
 
 ---
