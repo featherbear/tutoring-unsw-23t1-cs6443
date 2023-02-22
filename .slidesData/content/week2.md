@@ -5,11 +5,9 @@ outputs: ["Reveal"]
 date: 2023-02-23T23:57:21+10:00
 ---
 
-HTTP Methods
-HTTP Versions
-URIs and URLs
-Protocols
-DNS and IPs
+{{< slide class="center" >}}
+
+## Week 2
 
 ---
 
