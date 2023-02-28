@@ -106,6 +106,12 @@ jk the demo did work I was just dumb
 
 ---
 
+# IDOR
+
+> Insecure Direct Object Reference
+
+
+> 🚪🚪
 
 ---
 
