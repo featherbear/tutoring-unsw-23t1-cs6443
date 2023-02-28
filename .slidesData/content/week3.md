@@ -92,3 +92,23 @@ jk the demo did work I was just dumb
 
 * Last week, auth via cookies
 * What does it mean to "log out"
+
+---
+
+## Learning HTTP Responses
+
+* 2XX - Success
+* 3XX - Redirect
+* 4XX - Client Error
+  * [418](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418)
+  * [451](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451)
+* 5XX - Server Error
+
+---
+
+
+---
+
+## Logistics
+
+Midterm Exam, Reports
