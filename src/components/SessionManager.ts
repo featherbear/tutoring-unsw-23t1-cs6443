@@ -1,11 +1,14 @@
-import { nanoid } from 'nanoid'
+import { nanoid } from 'nanoid/index'
 import type { Arbitrary } from "../types/binds"
+import logger from './logging'
 
-interface SessionID extends Number {}
+interface SessionID extends Number { }
 
 interface SessionType {
-    sessionKey: Arbitrary // TODO: Why is this insecure?
-    // sessionHash: Arbitrary
+    /**
+     * @deprecated - Why is this insecure? How to fix?
+     */
+    sessionKey: Arbitrary
 
     sessionID: SessionID
 }
@@ -13,11 +16,15 @@ interface SessionType {
 class SessionManager {
     #storage: { [username: string]: Array<SessionType> }
     #sessionCounter: number & SessionID
+
     constructor() {
-        this.clearSessions()
+        this.clearSessions(null, false)
         this.#sessionCounter = 0
     }
 
+    /**
+     * @private
+     */
     dumpSessions() {
         return this.#storage
     }
@@ -29,7 +36,10 @@ class SessionManager {
     checkSession(sessionKey: Arbitrary, username?: string): [string, SessionID] | null {
         for (let target of (username ? [username] : Object.keys(this.#storage))) {
             for (let session of (this.#storage[target] ?? [])) {
+
+                // TODO: Do we need to fix this?
                 if (session.sessionKey !== sessionKey) continue
+
                 return [target, session.sessionID]
             }
         }
@@ -43,23 +53,33 @@ class SessionManager {
 
         this.#storage[username] = [...this.#storage[username], { sessionKey, sessionID }]
 
+        logger.info("Created session", { sessionKey, sessionID, username })
         return sessionKey
     }
 
     deleteSession(username: string, sessionID: SessionID) {
+        let currentSessions = this.#storage[username] ?? []
+        let newSessions = currentSessions.filter(
+            (obj) => obj.sessionID !== sessionID
+        )
+
+        if (newSessions.length !== currentSessions.length) {
+            logger.info("Deleted session", { username, sessionID })
+        }
+
         this.#storage = {
             ...this.#storage,
-            [username]: (this.#storage[username] ?? [])
-                .filter(
-                    (obj) => obj.sessionID !== sessionID
-                )
+            [username]: newSessions
         }
     }
 
-    clearSessions(username?: string) {
+    clearSessions(username?: string, log = true) {
         if (username) {
+            log && logger.warn("Sessions cleared", { username })
             delete this.#storage[username]
         } else {
+            log && logger.warn("All sessions cleared")
+
             this.#storage = {}
         }
     }
