@@ -39,7 +39,8 @@ export default {
 					sourceMap: dev,
 					postcss: {
 						plugins: [
-							tailwind
+							tailwind,
+							require('autoprefixer')
 						]
 					},
 					dev,
@@ -99,7 +100,9 @@ export default {
 					sourceMap: dev,
 					postcss: {
 						plugins: [
-							tailwind
+							tailwind,
+							require('autoprefixer')
+
 						]
 					}
 				}),

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.svelte'],
+  content: ['./src/**/*.{svelte,js,ts}'],
   plugins: [
     require("daisyui")
   ],
