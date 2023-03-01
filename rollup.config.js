@@ -5,7 +5,7 @@ import commonjs from '@rollup/plugin-commonjs';
 import url from '@rollup/plugin-url';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';
 import config from 'sapper/config/rollup.js';
@@ -43,9 +43,11 @@ export default {
 							require('autoprefixer')
 						]
 					},
+				}),
+				compilerOptions: {
 					dev,
 					hydratable: true
-				})
+				}
 			}),
 			url({
 				sourceDir: path.resolve(__dirname, 'src/node_modules/images'),
@@ -102,7 +104,6 @@ export default {
 						plugins: [
 							tailwind,
 							require('autoprefixer')
-
 						]
 					}
 				}),
@@ -126,26 +127,6 @@ export default {
 		],
 		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
 		preserveEntrySignatures: 'strict',
-		onwarn,
-	},
-
-	serviceworker: {
-		input: config.serviceworker.input().replace(/\.js$/, '.ts'),
-		output: config.serviceworker.output(),
-		plugins: [
-			resolve(),
-			replace({
-				preventAssignment: true,
-				values: {
-					'process.browser': true,
-					'process.env.NODE_ENV': JSON.stringify(mode)
-				},
-			}),
-			commonjs(),
-			typescript({ sourceMap: dev }),
-			!dev && terser()
-		],
-		preserveEntrySignatures: false,
 		onwarn,
 	}
 };
