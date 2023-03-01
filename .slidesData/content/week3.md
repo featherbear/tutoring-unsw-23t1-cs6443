@@ -98,14 +98,6 @@ jk the demo did work I was just dumb
 
 ---
 
-## Session Management
-
-* Last week, auth via cookies
-* What does it mean to "log out"
-* Broken session management
-
----
-
 ## Learning HTTP Responses
 
 * 2XX - Success
@@ -114,6 +106,14 @@ jk the demo did work I was just dumb
   * [418](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/418)
   * [451](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/451)
 * 5XX - Server Error
+
+---
+
+## Session Management
+
+* Last week, auth via cookies
+* What does it mean to "log out"
+* Broken session management
 
 ---
 
