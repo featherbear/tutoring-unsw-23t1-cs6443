@@ -1,45 +1,26 @@
-<script>
-  import successkid from "images/successkid.jpg";
+<script lang="ts">
+  import { store as AuthStore } from "../frontend/AuthProvider";
+  import LoginForm from "../frontend/LoginForm.svelte";
 </script>
 
 <svelte:head>
-  <title>Sapper project template</title>
+  <title>Broken Session Management Demo</title>
 </svelte:head>
 
-
-<h1>Great success!</h1>
-
-<figure>
-  <img alt="Success Kid" src={successkid} />
-  <figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p>
-  <strong
-    >Try editing this file (src/routes/index.svelte) to test live reloading.</strong
+{#if $AuthStore}
+  <h1>Great success!</h1>
+  <p>
+    Logged in as <span>{$AuthStore}</span>
+  </p>
+  <button
+    class="btn btn-outline btn-primary"
+    on:click={() =>
+      prompt("Your session key", sessionStorage.getItem("session"))}
+    >Reveal session token</button
   >
-</p>
-<div class="alert shadow-lg">
-  <div>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      class="stroke-info flex-shrink-0 w-6 h-6"
-      ><path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-      /></svg
-    >
-    <span>we use cookies for no reason.</span>
-  </div>
-  <div class="flex-none">
-    <button class="btn btn-sm btn-ghost">Deny</button>
-    <button class="btn btn-sm btn-primary">Accept</button>
-  </div>
-</div>
+{:else}
+  <LoginForm />
+{/if}
 
 <style>
   h1,

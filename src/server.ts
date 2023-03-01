@@ -7,7 +7,7 @@ import { json } from 'body-parser';
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
 
-import logger from './components/logging';
+import logger from './backend/logging';
 import serverLogic from './serverLogic'
 
 express()
@@ -19,5 +19,5 @@ express()
 	.use('/api/v1', serverLogic)
 	.use(sapper.middleware())
 	.listen(PORT, () => {
-		logger.info("Server is running", { PORT })
+		logger.info({ PORT }, "Server is running")
 	});

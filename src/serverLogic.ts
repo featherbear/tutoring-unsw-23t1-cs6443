@@ -1,6 +1,6 @@
 import { Router } from "express"
-import AuthManager, { UserStore } from "./components/AuthManager"
-import logger from "./components/logging"
+import AuthManager, { UserStore } from "./backend/AuthManager"
+import logger from "./backend/logging"
 
 const userStore: UserStore = {
     // FIXME: Obviously we shouldn't store the passwords in plain-text
@@ -8,22 +8,23 @@ const userStore: UserStore = {
     "user": "user"
 }
 let auth = new AuthManager(userStore)
-logger.debug("Users created", userStore)
+logger.debug(userStore, "Users created")
 
 let root = Router()
 
 root.post("/login", (req, res) => {
     const { username, password } = req.body
+
     let response = auth.login(username, password)
 
     if (response) {
-        logger.info("Login success", { username })
+        logger.info({ username }, "Login success")
         return res.json({
             status: true,
             token: response
         })
     } else {
-        logger.warn("Login fail", { username })
+        logger.warn({ username }, "Login fail")
 
         return res.json({
             status: false

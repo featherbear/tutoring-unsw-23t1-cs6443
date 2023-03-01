@@ -3,7 +3,7 @@ import SessionManager from "./SessionManager";
 
 export type UserStore = { [username: string]: Password }
 
-export class AuthError extends Error {}
+export class AuthError extends Error { }
 
 class AuthManager {
     #userStore: UserStore
@@ -24,8 +24,10 @@ class AuthManager {
 
     withSession<T>(sessionKey: Arbitrary, func: (authObject: ReturnType<SessionManager['checkSession']>) => T) {
         let activeSession = this.#sessionManager.checkSession(sessionKey)
-        if (!activeSession) throw new AuthError("Not authenticated")
-
+        if (!activeSession) {
+            throw new AuthError("Not authenticated")
+        }
+        
         return func(activeSession)
     }
 }

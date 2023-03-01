@@ -51,9 +51,9 @@ class SessionManager {
         const sessionKey: Arbitrary = nanoid()
         const sessionID: SessionID = ++this.#sessionCounter
 
-        this.#storage[username] = [...this.#storage[username], { sessionKey, sessionID }]
+        this.#storage[username] = [...(this.#storage[username] ?? []), { sessionKey, sessionID }]
 
-        logger.info("Created session", { sessionKey, sessionID, username })
+        logger.info({ sessionKey, sessionID, username }, "Created session")
         return sessionKey
     }
 
@@ -64,7 +64,7 @@ class SessionManager {
         )
 
         if (newSessions.length !== currentSessions.length) {
-            logger.info("Deleted session", { username, sessionID })
+            logger.info({ username, sessionID }, "Deleted session")
         }
 
         this.#storage = {
@@ -75,7 +75,7 @@ class SessionManager {
 
     clearSessions(username?: string, log = true) {
         if (username) {
-            log && logger.warn("Sessions cleared", { username })
+            log && logger.warn({ username }, "Sessions cleared")
             delete this.#storage[username]
         } else {
             log && logger.warn("All sessions cleared")

@@ -1,5 +1,5 @@
 <script>
-  import Nav from "../components/Nav.svelte";
+  import Nav from "../frontend/Nav.svelte";
 </script>
 
 <Nav />
@@ -12,4 +12,8 @@
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
+
+  /* #app {
+    background-color: red;
+  } */
 </style>
