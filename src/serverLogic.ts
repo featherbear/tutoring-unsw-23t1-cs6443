@@ -50,4 +50,24 @@ root.get("/me", (req, res) => {
     }
 })
 
+root.delete("/me", (req, res) => {
+    try {
+        // Get the auth token
+        let token = req.headers.authorization?.split(" ")[1]
+        return auth.withSession(token, function ([username, sessionID]) {
+            
+            this.deleteSession(username, sessionID)
+
+            return res.json({
+                status: true
+            })
+        })
+    } catch (e) {
+        return res.json({
+            status: false,
+            error: (<Error>e)?.message ?? "An error occurred"
+        })
+    }
+})
+
 export default root

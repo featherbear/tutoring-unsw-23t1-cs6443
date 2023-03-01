@@ -22,13 +22,13 @@ class AuthManager {
         return null
     }
 
-    withSession<T>(sessionKey: Arbitrary, func: (authObject: ReturnType<SessionManager['checkSession']>) => T) {
+    withSession<T>(sessionKey: Arbitrary, func: (this: SessionManager, authObject: ReturnType<SessionManager['checkSession']>) => T): T {
         let activeSession = this.#sessionManager.checkSession(sessionKey)
         if (!activeSession) {
             throw new AuthError("Not authenticated")
         }
-        
-        return func(activeSession)
+
+        return func.call(this.#sessionManager, activeSession)
     }
 }
 

@@ -20,10 +20,34 @@ export async function login(username: string, password: Password) {
     throw new Error("Incorrect username or password")
 }
 
+export async function logout() {
+    // Request the server to remove the session
+    let response = await fetch(BASE_URL + "/me", {
+        method: 'DELETE',
+        headers: {
+            "Authorization": `Bearer ${sessionStorage.getItem('session')}`
+        }
+    })
+        .then(r => r.json())
+    if (response['status']) {
+        clearLocalState()
+    } else {
+        console.error("Errrr...", response)
+        alert("An error occured... check the console")
+    }
+
+}
+
+
 /**
- * @deprecated VULN
+ * @deprecated VULN - Server side invalidation not used
  */
 export async function logout__VULN() {
+    clearLocalState()
+}
+
+function clearLocalState() {
+    updateState?.(lastState = null)
     sessionStorage.removeItem('session')
     location.reload()
 }
@@ -45,13 +69,11 @@ export async function getDetails(token: Arbitrary) {
 let lastState: any = null
 let updateState: Function
 
-export const store =  readable(null, (update) => {
+export const store = readable(null, (update) => {
     updateState = update
 
     if (process.browser) {
-        console.log('browser exec');
         let token = sessionStorage.getItem('session')
-        console.log(token);
         if (token) getDetails(token)
     }
 })

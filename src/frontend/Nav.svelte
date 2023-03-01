@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { logout__VULN, store as AuthStore } from "./AuthProvider";
+  import { logout, logout__VULN, store as AuthStore } from "./AuthProvider";
 </script>
 
 <div class="navbar bg-base-100">
@@ -11,7 +11,9 @@
   <div class="navbar-center lg:flex" />
   <div class="navbar-end text-right">
     {#if $AuthStore}
-      <button class="btn" on:click={logout__VULN}>Log out</button>
-    {/if}
+      <button class="btn" on:click={logout__VULN}>Log out (bad)</button>
+      <button class="btn" on:click={logout}>Log out (good)</button>
+
+      {/if}
   </div>
 </div>
