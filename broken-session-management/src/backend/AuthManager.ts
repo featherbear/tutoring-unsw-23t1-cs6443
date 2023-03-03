@@ -14,6 +14,7 @@ class AuthManager {
     }
 
     login(username: string, password: Password) {
+        if (!username || !password) return null
         if (this.#userStore[username] === password) {
             return this.#sessionManager.createSession(username)
         }
