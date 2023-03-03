@@ -37,3 +37,12 @@ declare module "*.webp" {
 	const value: string;
 	export default value;
 }
+
+declare namespace NodeJS {
+	export interface Process {
+		/**
+		 * Is the current execution context in a browser
+		 */
+		browser: boolean
+	}
+}
