@@ -8,20 +8,20 @@
 
   async function doLogin() {
     isLoginProcess = true;
-    await login(loginData.username, loginData.password).catch(
-      () => (wasLoginFail = true)
-    );
-    setTimeout(() => {
-      isLoginProcess = false;
-    }, 1000);
+    await login(loginData.username, loginData.password).catch(() => {
+      setTimeout(() => {
+        wasLoginFail = true;
+        isLoginProcess = false;
+      }, 1000);
+    });
   }
 </script>
 
 <div class="content-center">
   <div class="form-control w-full max-w-xs">
-    <label class="label">
+    <div class="label">
       <span class="label-text">Username</span>
-    </label>
+    </div>
     <input
       type="text"
       placeholder="Enter username"
@@ -31,9 +31,9 @@
     />
   </div>
   <div class="form-control w-full max-w-xs">
-    <label class="label">
+    <div class="label">
       <span class="label-text">Password</span>
-    </label>
+    </div>
     <input
       type="password"
       placeholder="Enter password"
@@ -42,7 +42,7 @@
       bind:value={loginData.password}
     />
   </div>
-  <div class="form-control max-w-xs">
+  <div class="form-control max-w-xs mt-4">
     <button
       class="btn btn-accent"
       class:loading={isLoginProcess}

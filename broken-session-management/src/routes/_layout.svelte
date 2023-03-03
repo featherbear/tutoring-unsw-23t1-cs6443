@@ -13,7 +13,9 @@
   @tailwind components;
   @tailwind utilities;
 
-  /* #app {
-    background-color: red;
-  } */
+  #app > main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 </style>
