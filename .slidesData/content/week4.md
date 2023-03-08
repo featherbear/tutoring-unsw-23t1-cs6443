@@ -36,8 +36,10 @@ date: 2023-03-08T02:57:21+10:00
   * `<>` - not equal to
   * ...
 * LIKE
-  * `%` - wildcard
+  * `_` - single wildcard
+  * `%` - multiple wildcard
 * UNION
+* JOIN
 * ...
 
 
