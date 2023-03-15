@@ -58,6 +58,11 @@ You now have a handle to every function. welp.
 RCE (Remote Code Execution)
 ```
 
+<!--
+ Q: Why can't we just use open() ... etc?
+ A: Not imported into the application's local scope
+-->
+
 ---
 
 ##### Local File Inclusion
