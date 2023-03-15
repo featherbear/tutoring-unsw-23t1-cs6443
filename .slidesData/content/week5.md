@@ -11,6 +11,37 @@ date: 2023-03-15T02:57:21+10:00
 
 ---
 
+##### The State of Servers
+
+Most apps (well..) are run on a Linux machine?
+
+* Cheap
+* Scaleable
+* Did I mention [cheap](https://lmgtfy.app/?q=windows+server+license+price)
+
+So if it's running linux...
+
+---
+
+##### A bunch of paths...
+
+```
+./
+../
+.../?
+
+Apache - logs, .htaccess
+Nginx - logs, site-enabled
+/proc/self/{environ, cmdline}
+app.py
+/etc/{passwd, shadow}
+/etc/resolv.conf
+/home/${user}
+~/.ssh/id_rsa
+```
+
+---
+
 ##### Server Side Template Injection
 
 e.g. Jinja templating (Python + Flask)
