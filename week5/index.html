@@ -1,4 +1,16 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><title>Week 5 - Server Side</title><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=../reveal-js/css/reset.css><link rel=stylesheet href=../reveal-js/css/reveal.css><link rel=stylesheet href=../reveal-js/css/theme/black.css id=theme><link rel=stylesheet href=../highlight-js/default.min.css></head><body><div class=reveal><div class=slides><section data-noprocess data-shortcode-slide class=center><h2 id=week-5>Week 5</h2></section><section><h5 id=server-side-template-injection>Server Side Template Injection</h5><p>e.g. Jinja templating (Python + Flask)</p><pre><code>{{ &quot;hello &quot; + &quot;world&quot; }} =&gt; &quot;hello world&quot;
+<!doctype html><html lang=en><head><meta charset=utf-8><title>Week 5 - Server Side</title><meta name=apple-mobile-web-app-capable content="yes"><meta name=apple-mobile-web-app-status-bar-style content="black-translucent"><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><link rel=stylesheet href=../reveal-js/css/reset.css><link rel=stylesheet href=../reveal-js/css/reveal.css><link rel=stylesheet href=../reveal-js/css/theme/black.css id=theme><link rel=stylesheet href=../highlight-js/default.min.css></head><body><div class=reveal><div class=slides><section data-noprocess data-shortcode-slide class=center><h2 id=week-5>Week 5</h2></section><section><h5 id=the-state-of-servers>The State of Servers</h5><p>Most apps (well..) are run on a Linux machine?</p><ul><li>Cheap</li><li>Scaleable</li><li>Did I mention <a href="https://lmgtfy.app/?q=windows+server+license+price">cheap</a></li></ul><p>So if it&rsquo;s running linux&mldr;</p></section><section><h5 id=a-bunch-of-paths>A bunch of paths&mldr;</h5><pre><code>./
+../
+.../?
+
+Apache - logs, .htaccess
+Nginx - logs, site-enabled
+/proc/self/{environ, cmdline}
+app.py
+/etc/{passwd, shadow}
+/etc/resolv.conf
+/home/${user}
+~/.ssh/id_rsa
+</code></pre></section><section><h5 id=server-side-template-injection>Server Side Template Injection</h5><p>e.g. Jinja templating (Python + Flask)</p><pre><code>{{ &quot;hello &quot; + &quot;world&quot; }} =&gt; &quot;hello world&quot;
 </code></pre><pre><code class=language-sql>{{ &quot;&quot;.__class__.__mro__[1].__subclasses__() }}
                      ^ the `object` class
 
