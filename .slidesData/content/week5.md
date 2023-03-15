@@ -88,3 +88,10 @@ RCE (Remote Code Execution)
 
 * Demo - WebCMS4
 * Demo - Web Shell
+
+---
+
+##### Deliverables
+
+* Report due Sun 19th March @ 11:55pm  
+* Challenges too
