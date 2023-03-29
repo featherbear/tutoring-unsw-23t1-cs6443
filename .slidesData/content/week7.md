@@ -181,6 +181,34 @@ Generally XSS is performed in the background
 
 ---
 
+## HTML
+
+{{% section %}}
+
+* DOM
+  * Virtual DOM
+  * Shadow DOM
+* Some element tags are paired - `<div>...</div>`
+* Some are not... `<img>`
+* What if just added `<s>` without closing it?
+
+---
+
+##### HTML + JS
+
+* document.write()
+* document.querySelector\[All\]()
+* document.getElementsByTagName()
+* document.getElementById()
+* Script tags
+  * External script tags.. [load lifecycle](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
+* HTML Injection
+  * `<script>` --> JS injection
+
+{{% /section %}}
+
+---
+
 ### Clickjacking
 
 {{% section %}}
@@ -268,30 +296,6 @@ Some extensions / JS magic can help to prevent clickjacking attempts.
 > X-Frame-Options
 
 {{% /section %}}
-
----
-
-## HTML
-
-* DOM
-  * Virtual DOM
-  * Shadow DOM
-* Some element tags are paired - `<div>...</div>`
-* Some are not... `<img>`
-* What if just added `<s>` without closing it?
-
----
-
-## HTML + JS
-
-* document.write()
-* document.querySelector\[All\]()
-* document.getElementsByTagName()
-* document.getElementById()
-* Script tags
-  * External script tags.. [load lifecycle](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
-* HTML Injection
-  * `<script>` --> JS injection
 
 ---
 
