@@ -1,5 +1,5 @@
 ---
-title: "Week 5 - Client Side"
+title: "Week 7 - Client Side"
 layout: "bundle"
 outputs: ["Reveal"]
 date: 2023-03-28T02:57:21+10:00
