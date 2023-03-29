@@ -290,7 +290,7 @@ Some extensions / JS magic can help to prevent clickjacking attempts.
 * document.write()
 * document.querySelector\[All\]()
 * document.getElementsByTagName()
-* document.getElementByID()
+* document.getElementById()
 * Script tags
   * External script tags.. [load lifecycle](https://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html)
 * HTML Injection
