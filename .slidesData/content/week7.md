@@ -55,7 +55,6 @@ site = <u><span style="color: #00b050">dom</span><span style="color: #007133">ai
 
 ---
 
-
 ### Cross-Origin Policy
 
 {{% section %}}
@@ -90,8 +89,6 @@ site = <u><span style="color: #00b050">dom</span><span style="color: #007133">ai
     * JSONP
 
 ---
-
-
 
 #### JSONP
 
