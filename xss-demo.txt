@@ -1,1 +1,1 @@
-https://github.com/featherbear/tutoring-unsw-21t2-cs6443-cs6843/tree/master/xss_demo
+https://github.com/featherbear/demo-xss
