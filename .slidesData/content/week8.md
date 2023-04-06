@@ -65,7 +65,7 @@ on
 
 An overlay (possibly hidden or transparent) with a higher `z-index` than a form control (i.e. submit button)
 
-When the user "clicks" on the button, they instead click on something else.
+When the user "clicks" on the button, they instead click on something else[.](https://featherbear.cc/demo-js-clickjack/)
 
 * Trigger a script?
 * Redirect?
@@ -98,4 +98,10 @@ Some extensions / JS magic can help to prevent clickjacking attempts.
 > X-Frame-Options
 
 {{% /section %}}
+
+---
+
+### Breaking website protections
+
+<!-- https://github.com/featherbear/demo-response-header-splitting -->
 
